@@ -3,12 +3,12 @@ const { Client, ClientApplication } = require("discord.js");
 const commands = [
   {
     name: "start",
-    description: "録音を開始します。"
+    description: "録音を開始します。",
   },
   {
     name: "stop",
-    description: "録音を停止し、ファイルを出力します。"
-  }
+    description: "録音を停止し、ファイルを出力します。",
+  },
 ];
 
 (async () => {
@@ -20,4 +20,4 @@ const commands = [
   await client.application.commands.set(commands, process.argv[2]);
 
   console.log("Registration Success.");
-})()
+})();
