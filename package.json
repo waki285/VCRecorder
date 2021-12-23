@@ -4,7 +4,8 @@
   "description": "VoiceChannel Recorder",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "register": "npx node src/register.js"
   },
   "keywords": [],
   "author": "waki285 <suzuneu@suzuneu.com>",
@@ -15,5 +16,8 @@
     "discord.js": "^13.3.1",
     "ffmpeg-static": "^4.4.0",
     "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "node": "^16.13.1"
   }
 }
