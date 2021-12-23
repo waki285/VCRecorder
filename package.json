@@ -1,0 +1,19 @@
+{
+  "name": "vcrecorder",
+  "version": "1.0.0",
+  "description": "VoiceChannel Recorder",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "waki285 <suzuneu@suzuneu.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@discordjs/voice": "^0.7.5",
+    "chalk": "^4.1.2",
+    "discord.js": "^13.3.1",
+    "ffmpeg-static": "^4.4.0",
+    "tweetnacl": "^1.0.3"
+  }
+}
