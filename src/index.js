@@ -9,6 +9,8 @@ const client = new Client({
   ],
 });
 
+const recordable = new Set();
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}.`);
   client.user.setPresence({
@@ -17,8 +19,13 @@ client.on("ready", () => {
 });
 
 client.on("interactionCreate", (i) => {
+  if (!i.isCommand()) return;
   const { commandName: command } = i;
   if (command === "start") {
-    
+    await i.deferReply();
+    const connection = getVoiceConnection(i.guildId);
+    if (!connection) {
+      
+    }
   }
 });
