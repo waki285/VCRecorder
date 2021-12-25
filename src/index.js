@@ -11,6 +11,8 @@ const client = new Client({
 
 const recordable = new Set();
 
+require("dotenv").config();
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}.`);
   client.user.setPresence({

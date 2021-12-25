@@ -11,6 +11,8 @@ const commands = [
   },
 ];
 
+require("dotenv").config();
+
 (async () => {
   const client = new Client({ intents: 0 });
   client.token = process.env.BOT_TOKEN;
