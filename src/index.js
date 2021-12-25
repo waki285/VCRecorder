@@ -23,9 +23,18 @@ client.on("interactionCreate", (i) => {
   const { commandName: command } = i;
   if (command === "start") {
     await i.deferReply();
-    const connection = getVoiceConnection(i.guildId);
+    let connection = getVoiceConnection(i.guildId);
     if (!connection) {
-      
+      if (i.member.voice.channel) {
+        const channel = i.member.voice.channel;
+        connection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          selfDeaf: false,
+          selfMute: true,
+          adapterCreator: channel.guild.voiceAdapterCreator
+        })
+      }
     }
   }
 });
