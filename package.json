@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "register": "npx node src/register.js"
+    "register": "npx node src/register.js",
+    "start": "npx node src/index.js"
   },
   "keywords": [],
   "author": "waki285 <suzuneu@suzuneu.com>",
